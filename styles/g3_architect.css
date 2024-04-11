@@ -25,6 +25,10 @@ body {
     cursor: pointer;
 }
 
+.section-title {
+    font-size: 2.8rem;
+}
+
 /* header styes */
 header {
     background: #fff4e6;
@@ -39,9 +43,6 @@ nav {
     align-items: center;
 }
 
-.nav-title {
-    font-size: 2.8rem;
-}
 
 nav ul {
     list-style-type: none;
@@ -97,14 +98,52 @@ main {
     gap: 10px;
 }
 
-
-
-.teams-title {
-    font-size: 2.8rem;
-}
-
 .feature-text {
     color: #FF900E;
+}
+
+/* feature styles */
+.feature {
+    display: flex;
+    margin-top: 130px;
+    gap: 100px;
+}
+
+.feature-content .section-title {
+    border-left: 5px solid #FF900E;
+    padding-left: 20px;
+}
+
+.card {
+    padding: 30px;
+    box-shadow: 0px 4px 30px 0px rgba(0, 0, 0, 0.06);
+    border-radius: 8px;
+    background: #FFF;
+    margin-bottom: 20px;
+}
+
+.feature-img img {
+    margin-left: 90px;
+}
+
+.experience-badge {
+    width: 342px;
+    position: relative;
+    bottom: 100px;
+    padding: 40px;
+    text-align: center;
+    border-radius: 8px;
+    background: #FF900E;
+    color: #FFF;
+}
+
+.experience-badge h2 {
+    font-size: 4rem;
+    margin: 0;
+}
+
+.experience-badge p {
+    font-size: 1.5rem;
 }
 
 /* media queries */
@@ -115,11 +154,9 @@ main {
         padding: 0px 10px;
     }
 
-    nav {
-        flex-direction: column;
-    }
-
-    .teams-container {
+    nav,
+    .teams-container,
+    .features {
         flex-direction: column;
     }
 
@@ -129,9 +166,22 @@ main {
     }
 
     .teams-container {
-        flex-direction: column;
         padding: 10px;
         text-align: center;
+
+    }
+
+    .feature-image img {
+        margin-left: 0;
+        width: 100%;
+    }
+
+
+    .ten-years-badge {
+        /* display: none; */
+        width: 100vw;
+        position: static;
+        padding: 40px 0;
 
     }
 
@@ -144,12 +194,13 @@ main {
         padding: 0px 10px;
     }
 
-    nav {
+    nav,
+    .teams-container,
+    .features {
         flex-direction: column;
     }
 
     .teams-container {
-        flex-direction: column;
         padding: 10px;
         text-align: center;
 
@@ -159,4 +210,8 @@ main {
         width: 100%;
     }
 
+    .feature-image img {
+        margin-left: 0;
+        width: 100%;
+    }
 }
